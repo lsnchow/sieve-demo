@@ -1,4 +1,4 @@
-# Sieve Dataset Curation Demo
+# Sieve Egocentric QA Pipeline Demo
 
 This repo demonstrates a public-data video curation workflow:
 
