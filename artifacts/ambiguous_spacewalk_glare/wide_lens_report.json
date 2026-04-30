@@ -1,0 +1,16 @@
+{
+  "filename": "ambiguous_spacewalk_glare.mp4",
+  "wide_lens_score": 0.2382,
+  "mean_radial_distortion": 0.2944,
+  "mean_edge_falloff": 0.6027,
+  "mean_line_curvature": 0.0447,
+  "mean_line_confidence": 0.5625,
+  "confidence": 0.7494,
+  "num_frames_analyzed": 10,
+  "example_frames": [
+    "artifacts/ambiguous_spacewalk_glare/wide_lens_examples/wl_sample_00_0.0s.jpg",
+    "artifacts/ambiguous_spacewalk_glare/wide_lens_examples/wl_sample_01_2.2s.jpg",
+    "artifacts/ambiguous_spacewalk_glare/wide_lens_examples/wl_sample_02_4.4s.jpg",
+    "artifacts/ambiguous_spacewalk_glare/wide_lens_examples/wl_sample_03_6.7s.jpg"
+  ]
+}

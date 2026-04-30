@@ -1,0 +1,16 @@
+{
+  "filename": "high_value_pov_horse_cart_alt.mp4",
+  "wide_lens_score": 0.3293,
+  "mean_radial_distortion": 0.4225,
+  "mean_edge_falloff": 1.0054,
+  "mean_line_curvature": 0.0796,
+  "mean_line_confidence": 1.0,
+  "confidence": 0.9423,
+  "num_frames_analyzed": 10,
+  "example_frames": [
+    "artifacts/high_value_pov_horse_cart_alt/wide_lens_examples/wl_sample_00_0.0s.jpg",
+    "artifacts/high_value_pov_horse_cart_alt/wide_lens_examples/wl_sample_01_2.0s.jpg",
+    "artifacts/high_value_pov_horse_cart_alt/wide_lens_examples/wl_sample_02_4.0s.jpg",
+    "artifacts/high_value_pov_horse_cart_alt/wide_lens_examples/wl_sample_03_6.0s.jpg"
+  ]
+}

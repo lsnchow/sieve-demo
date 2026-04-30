@@ -1,0 +1,21 @@
+{
+  "clips": 10,
+  "sum_sec": {
+    "t_widelens_sec": 7.657,
+    "t_stability_sec": 6.349,
+    "t_hands_sec": 5.901,
+    "t_total_clip_sec": 41.27
+  },
+  "mean_sec": {
+    "t_widelens_sec": 0.766,
+    "t_stability_sec": 0.635,
+    "t_hands_sec": 0.59,
+    "t_total_clip_sec": 4.127
+  },
+  "p95_sec": {
+    "t_widelens_sec": 1.157,
+    "t_stability_sec": 1.123,
+    "t_hands_sec": 2.245,
+    "t_total_clip_sec": 6.311
+  }
+}

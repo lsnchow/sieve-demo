@@ -1,0 +1,121 @@
+{
+  "filename": "high_value_pov_whitewater.mp4",
+  "max_motion_score": 100.64,
+  "peak_motion_score": 101.37,
+  "mean_motion_score": 65.19,
+  "median_motion_score": 65.19,
+  "spike_segments": [],
+  "probe_spike_segments": [],
+  "total_shaky_sec": 0.0,
+  "probe_total_shaky_sec": 0.0,
+  "num_frame_pairs": 2,
+  "sample_fps": 2.0,
+  "probe_sample_fps": 8.0,
+  "window_sec": 1.0,
+  "spike_threshold": 130.0,
+  "min_fail_segment_sec": 1.0,
+  "analysis_truncated": false,
+  "clip_duration_sec": 18.02,
+  "analyzed_duration_sec": 18.02,
+  "coarse_candidate_windows": [
+    {
+      "start_time": 0.11,
+      "end_time": 1.61,
+      "start_fmt": "00:00",
+      "end_fmt": "00:01",
+      "source": "probe"
+    },
+    {
+      "start_time": 5.56,
+      "end_time": 7.06,
+      "start_fmt": "00:05",
+      "end_fmt": "00:07",
+      "source": "probe"
+    },
+    {
+      "start_time": 11.0,
+      "end_time": 12.5,
+      "start_fmt": "00:11",
+      "end_fmt": "00:12",
+      "source": "probe"
+    },
+    {
+      "start_time": 16.48,
+      "end_time": 17.98,
+      "start_fmt": "00:16",
+      "end_fmt": "00:17",
+      "source": "probe"
+    }
+  ],
+  "refined_windows_analyzed": [
+    {
+      "start_time": 0.11,
+      "end_time": 1.61,
+      "start_fmt": "00:00",
+      "end_fmt": "00:01",
+      "source": "refine"
+    }
+  ],
+  "probe_window_scores": [
+    {
+      "start_time": 0.11,
+      "end_time": 1.61,
+      "start_fmt": "00:00",
+      "end_fmt": "00:01",
+      "source": "probe",
+      "score": 71.26
+    },
+    {
+      "start_time": 5.56,
+      "end_time": 7.06,
+      "start_fmt": "00:05",
+      "end_fmt": "00:07",
+      "source": "probe",
+      "score": 5.57
+    },
+    {
+      "start_time": 11.0,
+      "end_time": 12.5,
+      "start_fmt": "00:11",
+      "end_fmt": "00:12",
+      "source": "probe",
+      "score": 58.72
+    },
+    {
+      "start_time": 16.48,
+      "end_time": 17.98,
+      "start_fmt": "00:16",
+      "end_fmt": "00:17",
+      "source": "probe",
+      "score": 31.6
+    }
+  ],
+  "coverage_ratio": 0.333,
+  "timing_sec": {
+    "probe": 0.763,
+    "refine": 0.13,
+    "total": 0.915
+  },
+  "requires_manual_confirmation": false,
+  "spike_source": "refine",
+  "stability_config": {
+    "schema_version": 4,
+    "spike_threshold": 130.0,
+    "min_fail_segment_sec": 1.0,
+    "max_analysis_sec": 3600.0,
+    "probe_coverage": 0.08,
+    "probe_window_sec": 1.5,
+    "probe_k_min": 4,
+    "probe_k_max": 40,
+    "probe_fps": 8.0,
+    "probe_max_dim": 320,
+    "probe_jitter_fraction": 0.15,
+    "refine_top_fraction": 0.25,
+    "refine_min_windows": 2,
+    "refine_max_windows": 8,
+    "refine_coverage_fraction": 0.03,
+    "refine_fps": 2.0,
+    "refine_max_dim": 640
+  },
+  "stability_schema_version": 4
+}

@@ -1,0 +1,121 @@
+{
+  "filename": "high_value_pov_snowmobile.mp4",
+  "max_motion_score": 81.12,
+  "peak_motion_score": 81.34,
+  "mean_motion_score": 70.3,
+  "median_motion_score": 70.3,
+  "spike_segments": [],
+  "probe_spike_segments": [],
+  "total_shaky_sec": 0.0,
+  "probe_total_shaky_sec": 0.0,
+  "num_frame_pairs": 2,
+  "sample_fps": 2.0,
+  "probe_sample_fps": 8.0,
+  "window_sec": 1.0,
+  "spike_threshold": 130.0,
+  "min_fail_segment_sec": 1.0,
+  "analysis_truncated": false,
+  "clip_duration_sec": 20.0,
+  "analyzed_duration_sec": 20.0,
+  "coarse_candidate_windows": [
+    {
+      "start_time": 0.0,
+      "end_time": 1.5,
+      "start_fmt": "00:00",
+      "end_fmt": "00:01",
+      "source": "probe"
+    },
+    {
+      "start_time": 6.22,
+      "end_time": 7.72,
+      "start_fmt": "00:06",
+      "end_fmt": "00:07",
+      "source": "probe"
+    },
+    {
+      "start_time": 12.52,
+      "end_time": 14.02,
+      "start_fmt": "00:12",
+      "end_fmt": "00:14",
+      "source": "probe"
+    },
+    {
+      "start_time": 18.5,
+      "end_time": 20.0,
+      "start_fmt": "00:18",
+      "end_fmt": "00:20",
+      "source": "probe"
+    }
+  ],
+  "refined_windows_analyzed": [
+    {
+      "start_time": 6.22,
+      "end_time": 7.72,
+      "start_fmt": "00:06",
+      "end_fmt": "00:07",
+      "source": "refine"
+    }
+  ],
+  "probe_window_scores": [
+    {
+      "start_time": 0.0,
+      "end_time": 1.5,
+      "start_fmt": "00:00",
+      "end_fmt": "00:01",
+      "source": "probe",
+      "score": 2.44
+    },
+    {
+      "start_time": 6.22,
+      "end_time": 7.72,
+      "start_fmt": "00:06",
+      "end_fmt": "00:07",
+      "source": "probe",
+      "score": 54.58
+    },
+    {
+      "start_time": 12.52,
+      "end_time": 14.02,
+      "start_fmt": "00:12",
+      "end_fmt": "00:14",
+      "source": "probe",
+      "score": 3.88
+    },
+    {
+      "start_time": 18.5,
+      "end_time": 20.0,
+      "start_fmt": "00:18",
+      "end_fmt": "00:20",
+      "source": "probe",
+      "score": 7.09
+    }
+  ],
+  "coverage_ratio": 0.3,
+  "timing_sec": {
+    "probe": 0.997,
+    "refine": 0.266,
+    "total": 1.293
+  },
+  "requires_manual_confirmation": false,
+  "spike_source": "refine",
+  "stability_config": {
+    "schema_version": 4,
+    "spike_threshold": 130.0,
+    "min_fail_segment_sec": 1.0,
+    "max_analysis_sec": 3600.0,
+    "probe_coverage": 0.08,
+    "probe_window_sec": 1.5,
+    "probe_k_min": 4,
+    "probe_k_max": 40,
+    "probe_fps": 8.0,
+    "probe_max_dim": 320,
+    "probe_jitter_fraction": 0.15,
+    "refine_top_fraction": 0.25,
+    "refine_min_windows": 2,
+    "refine_max_windows": 8,
+    "refine_coverage_fraction": 0.03,
+    "refine_fps": 2.0,
+    "refine_max_dim": 640
+  },
+  "stability_schema_version": 4
+}

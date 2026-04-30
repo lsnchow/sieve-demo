@@ -1,0 +1,16 @@
+{
+  "filename": "static_or_duplicate_airplane_hold.mp4",
+  "wide_lens_score": 0.1719,
+  "mean_radial_distortion": 0.3091,
+  "mean_edge_falloff": 0.5163,
+  "mean_line_curvature": 0.0179,
+  "mean_line_confidence": 0.175,
+  "confidence": 0.4978,
+  "num_frames_analyzed": 10,
+  "example_frames": [
+    "artifacts/static_or_duplicate_airplane_hold/wide_lens_examples/wl_sample_00_0.0s.jpg",
+    "artifacts/static_or_duplicate_airplane_hold/wide_lens_examples/wl_sample_01_1.7s.jpg",
+    "artifacts/static_or_duplicate_airplane_hold/wide_lens_examples/wl_sample_02_3.3s.jpg",
+    "artifacts/static_or_duplicate_airplane_hold/wide_lens_examples/wl_sample_03_5.0s.jpg"
+  ]
+}

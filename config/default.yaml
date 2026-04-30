@@ -1,0 +1,62 @@
+ARTIFACTS_DIR: artifacts
+EXPORT_DIR: exports
+RAW_INPUT_DIR: raw_input
+DEMO_SOURCE_MAP_NAME: source_map.csv
+
+VIDEO_EXTENSIONS:
+  - .mp4
+  - .mov
+  - .avi
+  - .mkv
+  - .webm
+  - .ogv
+
+MIN_WIDTH: 1280
+MIN_HEIGHT: 720
+MIN_FPS: 29.0
+
+HANDS_SAMPLE_FPS: 1.0
+HANDS_MIN_SAMPLE_FPS: 0.15
+HANDS_TARGET_FRAMES: 300
+HANDS_RESAMPLE_FPS: 1.5
+HANDS_MIN_RATIO: 0.91
+HANDS_BORDERLINE_LOW: 0.9
+HANDS_BORDERLINE_HIGH: 0.98
+HANDS_REQUIRED_COUNT: 1
+HAND_MOTION_NORMALIZER: 0.08
+
+WIDE_LENS_PASS_THRESHOLD: 0.35
+WIDE_LENS_BORDERLINE_LOW: 0.35
+
+STABILITY_SPIKE_THRESHOLD: 130.0
+STABILITY_MIN_FAIL_SEGMENT_SEC: 1.0
+
+MANUAL_DARK_RATIO_FLAG: 0.45
+MANUAL_BLURRY_RATIO_FLAG: 0.45
+STATIC_DUPLICATE_FLAG_SCORE: 0.6
+
+STATUS_THRESHOLDS:
+  recommended: 0.68
+  low_value: 0.38
+
+TRAINING_VALUE_WEIGHTS:
+  hand_visible_ratio: 0.20
+  hand_presence_score: 0.12
+  hand_motion_score: 0.12
+  egocentric_proxy_score: 0.10
+  brightness_score: 0.10
+  blur_score: 0.10
+  motion_score: 0.08
+  camera_stability_score: 0.10
+  static_duplicate_score: 0.08
+
+CLIP_EXPORT_STATUSES:
+  - recommended
+
+DEMO_CATEGORIES:
+  - high_value_pov
+  - pov_no_action
+  - third_person
+  - low_quality
+  - static_or_duplicate
+  - ambiguous

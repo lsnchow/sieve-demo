@@ -1,0 +1,37 @@
+{
+  "total_clips": 10,
+  "recommended": 2,
+  "needs_review": 1,
+  "low_value": 7,
+  "demo_category_counts": {
+    "high_value_pov": 4,
+    "pov_no_action": 2,
+    "ambiguous": 1,
+    "low_quality": 1,
+    "static_or_duplicate": 1,
+    "third_person": 1
+  },
+  "quality_flag_counts": {
+    "third_person_likely": 5,
+    "blur": 2,
+    "low_resolution": 1,
+    "unstable_camera": 1,
+    "low_frame_rate": 1
+  },
+  "curation_reason_counts": {
+    "non-wide-lens framing (wide_lens_score=0.24)": 1,
+    "automated_quality_filter": 7,
+    "non_egocentric_view": 5,
+    "non-wide-lens framing (wide_lens_score=0.30)": 1,
+    "non-wide-lens framing (wide_lens_score=0.31)": 1,
+    "resolution 428x240 (<1280x720)": 1,
+    "non-wide-lens framing (wide_lens_score=0.27)": 1,
+    "super shaky segment around 00:04-00:06 (motion_score=230.91)": 1,
+    "non-wide-lens framing (wide_lens_score=0.17)": 1,
+    "fps 25.0 (<29)": 1,
+    "manual_review_pending": 1
+  },
+  "clip_export_dir": "exports/clips",
+  "thumbnail_dir": "exports/thumbnails",
+  "expected_total_match": true
+}

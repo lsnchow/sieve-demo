@@ -1,0 +1,121 @@
+{
+  "filename": "pov_no_action_airplane.mp4",
+  "max_motion_score": 85.23,
+  "peak_motion_score": 85.83,
+  "mean_motion_score": 55.76,
+  "median_motion_score": 55.76,
+  "spike_segments": [],
+  "probe_spike_segments": [],
+  "total_shaky_sec": 0.0,
+  "probe_total_shaky_sec": 0.0,
+  "num_frame_pairs": 2,
+  "sample_fps": 2.0,
+  "probe_sample_fps": 8.0,
+  "window_sec": 1.0,
+  "spike_threshold": 130.0,
+  "min_fail_segment_sec": 1.0,
+  "analysis_truncated": false,
+  "clip_duration_sec": 17.98,
+  "analyzed_duration_sec": 17.98,
+  "coarse_candidate_windows": [
+    {
+      "start_time": 0.0,
+      "end_time": 1.5,
+      "start_fmt": "00:00",
+      "end_fmt": "00:01",
+      "source": "probe"
+    },
+    {
+      "start_time": 5.32,
+      "end_time": 6.82,
+      "start_fmt": "00:05",
+      "end_fmt": "00:06",
+      "source": "probe"
+    },
+    {
+      "start_time": 11.21,
+      "end_time": 12.71,
+      "start_fmt": "00:11",
+      "end_fmt": "00:12",
+      "source": "probe"
+    },
+    {
+      "start_time": 16.48,
+      "end_time": 17.98,
+      "start_fmt": "00:16",
+      "end_fmt": "00:17",
+      "source": "probe"
+    }
+  ],
+  "refined_windows_analyzed": [
+    {
+      "start_time": 5.32,
+      "end_time": 6.82,
+      "start_fmt": "00:05",
+      "end_fmt": "00:06",
+      "source": "refine"
+    }
+  ],
+  "probe_window_scores": [
+    {
+      "start_time": 0.0,
+      "end_time": 1.5,
+      "start_fmt": "00:00",
+      "end_fmt": "00:01",
+      "source": "probe",
+      "score": 1.11
+    },
+    {
+      "start_time": 5.32,
+      "end_time": 6.82,
+      "start_fmt": "00:05",
+      "end_fmt": "00:06",
+      "source": "probe",
+      "score": 9.06
+    },
+    {
+      "start_time": 11.21,
+      "end_time": 12.71,
+      "start_fmt": "00:11",
+      "end_fmt": "00:12",
+      "source": "probe",
+      "score": 4.07
+    },
+    {
+      "start_time": 16.48,
+      "end_time": 17.98,
+      "start_fmt": "00:16",
+      "end_fmt": "00:17",
+      "source": "probe",
+      "score": 6.93
+    }
+  ],
+  "coverage_ratio": 0.3336,
+  "timing_sec": {
+    "probe": 0.607,
+    "refine": 0.279,
+    "total": 0.897
+  },
+  "requires_manual_confirmation": false,
+  "spike_source": "refine",
+  "stability_config": {
+    "schema_version": 4,
+    "spike_threshold": 130.0,
+    "min_fail_segment_sec": 1.0,
+    "max_analysis_sec": 3600.0,
+    "probe_coverage": 0.08,
+    "probe_window_sec": 1.5,
+    "probe_k_min": 4,
+    "probe_k_max": 40,
+    "probe_fps": 8.0,
+    "probe_max_dim": 320,
+    "probe_jitter_fraction": 0.15,
+    "refine_top_fraction": 0.25,
+    "refine_min_windows": 2,
+    "refine_max_windows": 8,
+    "refine_coverage_fraction": 0.03,
+    "refine_fps": 2.0,
+    "refine_max_dim": 640
+  },
+  "stability_schema_version": 4
+}

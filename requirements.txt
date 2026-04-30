@@ -1,0 +1,9 @@
+click>=8.1
+mediapipe>=0.10
+numpy>=1.26
+opencv-python>=4.10
+pandas>=2.2
+PyYAML>=6.0
+questionary>=2.0
+scipy>=1.13
+tqdm>=4.66

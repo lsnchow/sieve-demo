@@ -1,0 +1,24 @@
+{
+  "filename": "ambiguous_spacewalk_glare.mp4",
+  "sample_fps": 2.0,
+  "frames_sampled": 40,
+  "avg_luma": 87.42,
+  "dark_ratio": 0.0,
+  "avg_blur_laplacian_var": 391.01,
+  "blurry_ratio": 0.125,
+  "motion_score": 0.0812,
+  "static_ratio": 0.1026,
+  "duplicate_ratio": 0.3846,
+  "static_duplicate_score": 0.1872,
+  "max_cut_score": 0.487,
+  "candidate_jump_cuts": [],
+  "dark_segments": [],
+  "blurry_segments": [
+    {
+      "start_time": 8.48,
+      "end_time": 10.98,
+      "start_fmt": "00:08",
+      "end_fmt": "00:10"
+    }
+  ]
+}
