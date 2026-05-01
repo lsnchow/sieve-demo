@@ -316,8 +316,8 @@ def _build_summary(manifest_df: pd.DataFrame, output_dir: Path) -> dict:
         "demo_category_counts": category_counts,
         "quality_flag_counts": quality_flag_counts,
         "curation_reason_counts": reason_counts,
-        "clip_export_dir": str(output_dir / "clips"),
-        "thumbnail_dir": str(output_dir / "thumbnails"),
+        "clip_export_dir": "exports/clips",
+        "thumbnail_dir": "exports/thumbnails",
     }
 
 

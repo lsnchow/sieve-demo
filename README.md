@@ -15,26 +15,18 @@ The existing video-processing modules are preserved and repurposed as a compact 
 
 ## Repository Layout
 
-The runnable source code is all in this repo root and split by responsibility:
+The runnable code is split by responsibility:
 
-- `backend/`
-  - Python pipeline source
-  - ingest, heuristics, hand tracking, scoring, review, export
-- `src/`
-  - React frontend for local visualization
-- `vite.config.ts`
-  - local Vite runtime bridge for dataset runs and uploads during dev
-- `run_dataset_demo.py`
-  - Python CLI wrapper into `backend.cli`
-- `config/default.yaml`
-  - public thresholds and heuristic weights
-- `scripts/`
-  - dataset/demo helper scripts
+- `backend/` - Python pipeline source
+- `src/` - React frontend
+- `vite.config.ts` - local Vite runtime bridge for dataset runs and uploads during dev
+- `run_dataset_demo.py` - Python CLI wrapper into `backend.cli`
+- `config/default.yaml` - public thresholds and heuristic weights
 
-The main Python entrypoint is:
+The main Python CLI entrypoint is:
 
 ```bash
-.venv/bin/python run_dataset_demo.py show-config
+python run_dataset_demo.py show-config
 ```
 
 ## Technical Flow
@@ -128,36 +120,43 @@ pip install -r requirements.txt
 
 The MediaPipe hand model downloads automatically on first hand-analysis run if `models/hand_landmarker.task` is missing.
 
-## Fetch Public Demo Inputs
+## Quickstart
 
-The demo input set is a flat `raw_input/` directory plus `raw_input/source_map.csv`.
+Clone the repo, create the Python environment, install dependencies, and run the pipeline on a folder of videos.
 
 ```bash
-.venv/bin/python scripts/fetch_public_demo_inputs.py
+python3.11 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+python run_dataset_demo.py show-config
+python run_dataset_demo.py run-all -i /absolute/path/to/videos --snapshot-output-dir exports
 ```
 
-The fetch script pulls public videos from Wikimedia Commons, cuts them into shorter demo clips, and writes clip provenance and `demo_category` metadata into the sidecar CSV.
+That produces:
 
-## Run The Demo
+- `artifacts/` - per-clip analysis artifacts
+- `exports/dataset_manifest.csv`
+- `exports/dataset_manifest.json`
+- `exports/dataset_index.sqlite`
+- `exports/summary.json`
+
+Optional export refresh:
 
 ```bash
-bash demo.sh
+python run_dataset_demo.py export -o exports
 ```
 
-Or step-by-step:
+Optional manual review and labeling:
 
 ```bash
-.venv/bin/python run_dataset_demo.py show-config
-.venv/bin/python run_dataset_demo.py prepare-dataset --input-dir raw_input --expected-count 10
-.venv/bin/python run_dataset_demo.py run-all -i raw_input -n 10 --snapshot-output-dir exports
-.venv/bin/python run_dataset_demo.py export -o exports -n 10
+python run_dataset_demo.py review --input-dir /absolute/path/to/videos --output-dir exports
+python run_dataset_demo.py label --output-dir exports
 ```
 
-Manual review and labeling remain available when you want to override or enrich the automated results:
+If you want a public sample-input generator, the optional helper script is:
 
 ```bash
-.venv/bin/python run_dataset_demo.py review --input-dir raw_input --output-dir exports
-.venv/bin/python run_dataset_demo.py label --output-dir exports
+python scripts/fetch_public_demo_inputs.py
 ```
 
 ## Demo Frontend
@@ -171,7 +170,7 @@ It reads directly from the static files in `exports/`:
 - `exports/thumbnails/*`
 - `exports/clips/*`
 
-Run it locally with no backend:
+Run it locally:
 
 ```bash
 npm install
@@ -184,7 +183,7 @@ Build the static viewer:
 npm run build
 ```
 
-Vite is configured to expose `exports/` as static frontend assets, so the UI stays read-only and backend-free.
+The frontend reads from `exports/` and uses a local Vite dev bridge for folder runs and uploads during development.
 
 ## Outputs
 
