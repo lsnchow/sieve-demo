@@ -118,8 +118,6 @@ python3.11 -m venv .venv
 pip install -r requirements.txt
 ```
 
-The MediaPipe hand model downloads automatically on first hand-analysis run if `models/hand_landmarker.task` is missing.
-
 ## Quickstart
 
 Clone the repo, create the Python environment, install dependencies, and run the pipeline on a folder of videos.
@@ -132,6 +130,8 @@ python run_dataset_demo.py show-config
 python run_dataset_demo.py run-all -i /absolute/path/to/videos --snapshot-output-dir exports
 ```
 
+If you want to test a single video file, put it in its own folder first, then point `-i` at that folder.
+
 That produces:
 
 - `artifacts/` - per-clip analysis artifacts
@@ -139,25 +139,6 @@ That produces:
 - `exports/dataset_manifest.json`
 - `exports/dataset_index.sqlite`
 - `exports/summary.json`
-
-Optional export refresh:
-
-```bash
-python run_dataset_demo.py export -o exports
-```
-
-Optional manual review and labeling:
-
-```bash
-python run_dataset_demo.py review --input-dir /absolute/path/to/videos --output-dir exports
-python run_dataset_demo.py label --output-dir exports
-```
-
-If you want a public sample-input generator, the optional helper script is:
-
-```bash
-python scripts/fetch_public_demo_inputs.py
-```
 
 ## Demo Frontend
 
@@ -214,7 +195,7 @@ exports/
 
 ## Heuristic Scoring
 
-Thresholds and weights live in [`config/default.yaml`](/Users/lucas/Desktop/Sieve2/config/default.yaml). They are public heuristic defaults tuned for demo use on public or self-recorded clips, not confidential rubric values.
+Thresholds and weights live in [`config/default.yaml`](/Users/lucas/Desktop/Sieve2/config/default.yaml). They are public heuristic defaults tuned for demo use on public or self-recorded clips.
 
 The current score combines:
 
@@ -227,9 +208,3 @@ The current score combines:
 - `motion_score`
 - `camera_stability_score`
 - `static_duplicate_score`
-
-## Notes
-
-- MediaPipe is the required hand-tracking backend in this demo.
-- The existing manual labeling surface is kept as the action/object metadata layer; no new action-recognition model is introduced.
-- The pipeline still emits the original internal artifacts under `artifacts/`, but the public-facing demo surface is the `exports/` directory.
