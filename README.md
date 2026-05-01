@@ -13,6 +13,30 @@ The existing video-processing modules are preserved and repurposed as a compact 
 - manual review plus optional labeling
 - dataset manifest, JSON export, SQLite index, thumbnails, and clip export
 
+## Repository Layout
+
+The runnable source code is all in this repo root and split by responsibility:
+
+- `backend/`
+  - Python pipeline source
+  - ingest, heuristics, hand tracking, scoring, review, export
+- `src/`
+  - React frontend for local visualization
+- `vite.config.ts`
+  - local Vite runtime bridge for dataset runs and uploads during dev
+- `run_dataset_demo.py`
+  - Python CLI wrapper into `backend.cli`
+- `config/default.yaml`
+  - public thresholds and heuristic weights
+- `scripts/`
+  - dataset/demo helper scripts
+
+The main Python entrypoint is:
+
+```bash
+.venv/bin/python run_dataset_demo.py show-config
+```
+
 ## Technical Flow
 
 ```mermaid
@@ -135,6 +159,32 @@ Manual review and labeling remain available when you want to override or enrich 
 .venv/bin/python run_dataset_demo.py review --input-dir raw_input --output-dir exports
 .venv/bin/python run_dataset_demo.py label --output-dir exports
 ```
+
+## Demo Frontend
+
+A lightweight Vite + React viewer is included for a 60-second read-only demo of the exported artifacts.
+
+It reads directly from the static files in `exports/`:
+
+- `exports/summary.json`
+- `exports/dataset_manifest.json`
+- `exports/thumbnails/*`
+- `exports/clips/*`
+
+Run it locally with no backend:
+
+```bash
+npm install
+npm run dev
+```
+
+Build the static viewer:
+
+```bash
+npm run build
+```
+
+Vite is configured to expose `exports/` as static frontend assets, so the UI stays read-only and backend-free.
 
 ## Outputs
 

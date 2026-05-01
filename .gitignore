@@ -1,0 +1,10 @@
+.DS_Store
+.cache/
+.omx/
+.venv/
+node_modules/
+dist/
+__pycache__/
+backend/__pycache__/
+artifacts/
+models/hand_landmarker.task
